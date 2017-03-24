@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 159345903}
   - 61: {fileID: 159345904}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: South Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 286343163}
   - 61: {fileID: 286343164}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: North Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1045671451}
   - 61: {fileID: 1045671452}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: East Wall
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1143588790}
   - 212: {fileID: 1143588791}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Scenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,8 +320,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1143588789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 286343163}
   - {fileID: 159345903}
@@ -353,7 +353,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 12977003
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d3dbfc9efff7f42e5ab53ab7185301e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -368,7 +368,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1203107784}
   - 61: {fileID: 1203107785}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: West Wall
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - 60: {fileID: 1376268244}
   - 50: {fileID: 1376268247}
   - 114: {fileID: 1376268248}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -196485033
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6a872102b4f4f44d8b576317f76f808c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -522,7 +522,7 @@ GameObject:
   - 4: {fileID: 1721655141}
   - 212: {fileID: 1721655140}
   - 61: {fileID: 1721655142}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -196485033
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0b005d4dcc81b4ac68c3d816b7f41f5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -597,7 +597,7 @@ GameObject:
   - 212: {fileID: 2123913999}
   - 58: {fileID: 2123913998}
   - 50: {fileID: 2123914002}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -196485033
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e2f754e89e44f43a3aa2f75e48e1d678, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
