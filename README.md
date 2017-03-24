@@ -1,2 +1,2 @@
-# unity-pong-multiplayer
-Classic pong game with network multiplayer
+# Unity Pong Multiplayer
+Classic pong game with network multiplayer.
