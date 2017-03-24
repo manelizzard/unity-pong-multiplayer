@@ -12,8 +12,10 @@ public class Ball : MonoBehaviour {
 
 	private bool started = false;
 	private Rigidbody2D rigidBody;
+	private ScoreManager scoreManager;
 
 	void Start () {
+		scoreManager = FindObjectOfType<ScoreManager> ();
 		rigidBody = GetComponent<Rigidbody2D> ();
 	}
 
@@ -30,11 +32,19 @@ public class Ball : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		if (col.gameObject.tag == "Respawn") {
-			// - If a lose collider has been hit, respawn the ball.
-			started = false;
-			this.transform.position = new Vector2 (0f, 0f);
-			rigidBody.velocity = Vector2.zero;
+		if (col.gameObject.tag == "PlayerOneGoal") {
+			Respawn ();
+			scoreManager.PlayerTwoScores ();
+		} else if (col.gameObject.tag == "PlayerTwoGoal") {
+			Respawn ();
+			scoreManager.PlayerOneScores ();
 		}
+	}
+
+	private void Respawn() {
+		// - If a lose collider has been hit, respawn the ball.
+		started = false;
+		this.transform.position = new Vector2 (0f, 0f);
+		rigidBody.velocity = Vector2.zero;
 	}
 }
