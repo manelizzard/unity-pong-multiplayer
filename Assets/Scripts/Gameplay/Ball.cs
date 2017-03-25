@@ -1,34 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 /// <summary>
-/// Script handling the ball behavior. When user press "SPACE" key, 
-/// the ball is applied a random force in order to move.
+/// Script handling the ball behavior.
 /// 
 /// If the ball collides with a "Respawn" tag collider, the forces
 /// are removed and the ball is moved to the center of the scene.
 /// </summary>
-public class Ball : MonoBehaviour {
+public class Ball : NetworkBehaviour {
 
 	private bool started = false;
 	private Rigidbody2D rigidBody;
 	private ScoreManager scoreManager;
+	private PongNetworkManager networkManager;
 
 	void Start () {
 		scoreManager = FindObjectOfType<ScoreManager> ();
 		rigidBody = GetComponent<Rigidbody2D> ();
-	}
-
-	void Update () {
-		if (!started) {
-
-			if (Input.GetKeyDown (KeyCode.Space)) {
-				// - Start game
-				started = true;
-				rigidBody.velocity = new Vector2 (Mathf.Sign(Random.Range(-1f, 1f)) * Random.Range(5f, 8f), 
-					Mathf.Sign(Random.Range(-1f, 1f)) * Random.Range(5f, 8f));
-			}
-		}
+		networkManager = FindObjectOfType<PongNetworkManager> ();
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {

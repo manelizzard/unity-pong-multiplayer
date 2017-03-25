@@ -7,4 +7,4 @@ PhysicsMaterial2D:
   m_PrefabInternal: {fileID: 0}
   m_Name: PaddleBounce
   friction: 0
-  bounciness: 3
+  bounciness: 1

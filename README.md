@@ -3,33 +3,39 @@ Classic pong game with network multiplayer.
 
 # Usage
 
-Press __SPACE__ key to start the game.
+- Press __SPACE__ key to start the game. Only the __HOST__ can start the game.
 
-### Player 1
-Press __W__ and __S__ to move the paddle upwards and downwards.
- 
-### Player 2
-Press __UP ARROR__ and __DOWN ARROW__ to move the paddle upwards and downwards.
+- Press __UP ARROR__ and __DOWN ARROW__ to move the paddle upwards and downwards.
+
+- Host player is always spawned on the right field, while client player on the left field.
 
 # Implementation
 
-## Paddle
+### Paddle
 The paddle contains a kinematic RigidBody2D with a Polygon2D collider. This polygon enables to build a *non-rectangular* collider in order to allow the user more flexibility while hitting the ball.
 
-The paddle is moved at a certain velocity with keys *W* and *S* and clamped to avoid losing it outside the field.
+The paddle is moved at a certain velocity and clamped to avoid losing it outside the field.
 
-### Class hierarchy
-__PaddleController__ is the base class controlling the paddle movement and limitations. Child classes, like __PlayerOneController__ and __PlayerTwoController__, enable two players in the same controller by specifying the control keys (W/S or ARROWS).
+### _Class hierarchy_
+__PaddleController__ is the base class controlling the paddle movement and limitations. Child classes, like __PlayerController__, enable to specify the control keys (W/S or ARROWS).
 
-## Ball
-The ball contains a script used to start the game with *SPACE* key and a collision detection (with lose triggers) to respawn and start a new game.
+### Ball
+The ball contains a script used to detect collisions (with lose triggers), respawn and inform score manager.
 
-## Colliders
+### Colliders
 Aroud the field there are four colliders:
 
 - Two for the floor and ceiling, with a Physic2D material bouncing.
 - Two for the left and right walls. These ones are the colliders controlling the scores.
 
+# Multiplayer
+__PongNetworkManager__ takes care of starting the game when two players are connected (only the host can start the game). The __ScoreManager__ class synchronizes its variables in order to be displayed in both clients, and two __prefabs__ (*Ball* and *Player*) are spawned. __Player__ prefab is *Local Player Authority* in order to allow user control.
+
+### Starting the game
+One client must start as __HOST__ using the UNet HUD provided, while the other one must connect as a __LAN Client__. The host __IP__ needs to be provided to the second client to be able to connect.
+
 # Future work
 - Create proper art (and resolution) for scores.
 - Fix possible infite loops when ball bounces vertically against the walls.
+- Implement a turn-based game start.
+- Pack all assets in a SpriteSheet and create AssetsBundle in order to download season related assets. Implement particle systems and sound and include them in the AssetBundle.
