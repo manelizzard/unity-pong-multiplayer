@@ -1,6 +1,8 @@
 # Unity Pong Multiplayer
 Classic pong game with network multiplayer.
 
+![Screenshot](https://github.com/manelizzard/unity-pong-multiplayer/blob/master/screenshot.png?raw=true "Screenshot")
+
 # Usage
 
 - Press __SPACE__ key to start the game. Only the __HOST__ can start the game.
